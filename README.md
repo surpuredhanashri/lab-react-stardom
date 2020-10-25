@@ -1,68 +1,93 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Image description](https://i1.faceprep.in/ProGrad/prograd-logo.png)
 
-## Available Scripts
+# ProGrad Lab | REACT - STARDOM
 
-In the project directory, you can run:
+## Learning Goals
 
-### `npm start`
+In this exercise, the goal is ProStar in react:
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- props and state,
+- event handlers
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Getting started
 
-### `npm test`
+1. Fork this repo
+2. Clone this repo
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Whenever you create a first significant change, you should make your first commit.
 
-### `npm run build`
+3. Follow these [guidelines to add, commit and push changes](https://github.com/FACEPrep-ProGrad/general-guidelines-labs-project-builders.git).
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+In the end of this document, you will find guidelines on how to submit the exercise.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Instructions
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### PROGRESSION 1 | Display 5 Star Celebrities
 
-### `npm run eject`
+Let's take a look at the starter code.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Inside `resource` folder, you can find `prostar.json`, a JSON file with the producer's contacts. Import this file and **create an array of the 5 first star celebrities** to use as your initial state.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Display that array of 5 prostar in a `<table>` and display the `picture`, `name`, and `popularity` of each contact.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+To import `prostar.json` in `App.js`, you can simply use:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```js
+import prostar from "./prostar.json";
+```
 
-## Learn More
+At the end of this iteration, your application should look like this:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![Screenshot](https://i1.faceprep.in/ProGrad/pro1.PNG)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### PROGRESSION 2 | Add New Random Prostars
 
-### Code Splitting
+In your application, create a "_Add Random Prostart_ button so that every time you click on this button it adds a new random actor.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+First randomly select a prostars from the larger `prostars` array. Then add that prostar the array of 5 in your state. Don't forget to `setState()` to cause React to re-render the app.
 
-### Analyzing the Bundle Size
+At the end of this iteration, your website will probably look like this:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+![Screenshot](https://i1.faceprep.in/ProGrad/pro2.PNG)
 
-### Making a Progressive Web App
+### PROGRESSION 3 | Sort By Name
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+The producer asked you to add two new buttons to help them to sort their prostars. When you click on one of the buttons it should **sort the table by `name`** (alphabetically) and when click the other it should **sort by `popularity`** (highest first).
 
-### Advanced Configuration
+Don't forget to `setState()` after you sort!
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+This is what you may have at the end of this iteration:
 
-### Deployment
+![Screenshot](https://i1.faceprep.in/ProGrad/pro3.PNG)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+### PROGRESSION 4 | Sort By Popularity
 
-### `npm run build` fails to minify
+The producer asked you to add two new buttons to help them to sort their prostars. When you click on one of the buttons it should **sort by `popularity`** (highest first).
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Don't forget to `setState()` after you sort!
+
+This is what you may have at the end of this iteration:
+
+![Screenshot](https://i1.faceprep.in/ProGrad/pro4.PNG)
+
+### Bonus | Remove Prostars
+
+The producer also would like to remove some of their prostars. Implement a "_Delete_" button on each row of your `<table>` that will let the user remove the contact they clicked.
+
+When they click, you should get the index of the array of that actor and use it to remove the contact from the array. Don't forget to `setState()` after you remove the prostars!
+
+At the end of this iteration, your web page may look like this after playing a little bit with the "_Delete_" buttons.
+
+## Submission
+
+If you didn't add, commit and push the changes you made, this is the last call. :smile:
+
+please share your github links with your Mentors. Your Mentor's will check up your work and provide feedback.
+
+## Summary
+
+If you managed to do it, good job! :trophy:
+
+We are proud of you!
+
+Happy Coding ProGrad ❤️!
