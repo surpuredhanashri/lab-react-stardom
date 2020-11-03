@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 // eslint-disable-next-line no-unused-vars
 import prostars from './prostars.json'
-import StarRow from './components/Stars'
 import Stars from './components/Stars'
 
 export default class App extends Component {
